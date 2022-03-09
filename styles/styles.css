@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 30px 20px;
+    position: fixed;
+    transition: 0.6s;
+    z-index: 50;
+}
+
+.abajo{
+    background: rgb(4, 202, 209);
+    padding: 20px 20px;
+}
+
+.btn-toggle{
+    display: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+nav ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0px 20px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+}
+
+.zona1{
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+    width: 100%;
+    height: 100vh;
+}
+
+.zona1 h1{
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0.2;
+    font-size: 60px;
+}
+
+.zona2{
+    width: 100%;
+    height: 110vh;
+}
+
+.titulo{
+    width: 100%;
+    height: 20vh;
+    padding: 30px 20px;
+}
+
+.titulo h1{
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.zona2 .contenido{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    letter-spacing: 1px;    
+}
+
+.zona2 .descargarcv{
+    font-size: 1em;
+    padding: 10px 20px;
+    margin-top: 4em;
+    border-radius: 40px;
+    color: rgb(6, 99, 102);
+    border-color: rgb(4, 202, 209);
+    cursor: pointer;
+}
+
+.zona2 .descargarcv:hover{
+    background-color: rgb(4, 202, 209);
+    border: none;
+    color: white;
+}
+
+.zona2 .contenedor{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 40vh;
+    padding: 30px 60px;
+    margin-top: 3em;
+}
+
+.contenedor h2{
+    font-size: 1.5em;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    color: rgb(4, 202, 209);
+}
+
+
+.contenedor .skills-hobbies{
+    color: black;
+    padding: 25px 17px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.contenedor .skills-hobbies li{
+    padding: 3px 0px;
+}
+
+
+.zona3{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(white 1%, rgb(143, 141, 141)) ;
+}
+
+.zona3 .cont-certificaciones{
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    padding: 30px 20px;
+}
+
+.zona3 .cont-certificaciones .certificaciones{
+    padding: 30px 20px;
+    font-size: 1em;
+}
+
+.zona3 .cont-certificaciones .certificaciones:hover{
+    background: rgba(4, 202, 209, 0.404);
+    transition: 0.8s;
+}
+
+.zona3 .cont-certificaciones .certificaciones img{
+    max-width: 150px;
+}
+
+.zona3 .cont-certificaciones .certificaciones img:hover{
+    max-width: 230px;
+    transition: 0.8s;
+}
+
+.zona3 .cont-certificaciones .certificaciones p{
+    font-size: 1em;
+    font-weight: 700;
+    padding: 15px 0;
+}
+
+.zona4{
+    background-image: linear-gradient(rgb(143, 141, 141) 40%, white) ;
+    width: 100%;
+    height: 40vh;
+}
+
+.zona5{
+    width: 100%;
+    height: 40vh;
+}
+
+.zona5 .links-contacto{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+}
+
+.zona5 .links-contacto ul{
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+    margin: auto;
+}
+
+.zona5 .links-contacto ul li{
+    list-style: none;
+    color: black;
+    font-size: 35px;
+}
+
+.zona5 .links-contacto ul li:hover{
+    color: rgb(4, 202, 209);
+    font-size: 60px;
+    transition: 0.8s;
+}
+
+.zona5 .links-contacto ul li a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Tamanos para movil*/
+
+@media (max-width: 1060px){
+      
+    /*MENU DESPLEGABLE PARA MOVILES*/
+    
+   
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-right: 10px;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        left: 0;
+        top: 68px;
+        width: 100%;
+        padding: 15px 5px;
+        height: calc(85% - 50px);
+        overflow-y: auto;
+        transition: left 0.3s;
+        left: 100%;
+    }
+
+    nav ul a:hover{
+        color:  rgb(4, 202, 209);
+    }
+    
+    .btn-toggle{
+        display: block;
+        margin-left: 75%;
+    }
+
+    .zona1 h1{
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 0.2;
+        font-size: 40px;
+    }
+
+    .btn-menu_visible {
+        left: 0;
+    }
+
+    .zona2 .descargarcv{
+        font-size: 0.8em;
+    }
+
+    .titulo h1{
+        font-size: 2em;
+    }
+
+    .zona2{
+        height: 200vh;
+    }
+
+    .zona2 .contenido{
+        font-size: 1em;
+        font-weight: 200;
+    }
+
+    .contenedor{
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        font-size: 0.8em;
+    }
+
+    .zona3{
+        height: 140vh;
+    }
+
+    .zona3 .cont-certificaciones{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .zona3 .cont-certificaciones .certificaciones img:hover{
+        max-width: 150px;
+    }
+    
+}
